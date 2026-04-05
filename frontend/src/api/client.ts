@@ -1,8 +1,6 @@
 import axios from 'axios'
 
-// Use relative URL for same-domain deployment (Vercel)
-// Or use environment variable for separate deployments
-const baseURL = import.meta.env.VITE_API_URL || '/api'
+const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
 
 export const api = axios.create({
   baseURL,
