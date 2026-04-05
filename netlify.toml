@@ -1,0 +1,17 @@
+[build]
+  # Frontend is in subdirectory
+  base = "frontend"
+  # Build command
+  command = "npm run build"
+  # Vite outputs to dist folder
+  publish = "dist"
+
+# SPA redirect - all routes to index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[build.environment]
+  # Ensure Node version compatibility
+  NODE_VERSION = "18"
